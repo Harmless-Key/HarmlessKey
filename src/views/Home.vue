@@ -1,14 +1,8 @@
 <template>
-	<q-scroll-area
-		v-if="!user"
-		class="home"
-		:dark="$store.getters.theme === 'dark'"
-		:thumb-style="{ width: '10px' }"
-		v-on:scroll="handleScroll"
-	>
+	<div v-if="!user" class="home" ref="scrollArea">
 		<Header :scrolled="!!scrolled" />
 		<template v-if="diceColors.length > 0">
-			<section id="top">
+			<section class="home-section" id="top">
 				<Top :maintenance="maintenance" />
 				<span
 					class="die"
@@ -22,7 +16,7 @@
 				>
 				</span>
 			</section>
-			<section id="overview" class="bg-neutral-10">
+			<section id="overview" class="home-section bg-neutral-10">
 				<Feedback />
 				<span
 					class="die"
@@ -36,8 +30,8 @@
 				>
 				</span>
 			</section>
-			<section id="pricing" class="bg-neutral-11">
-				<Pricing />
+			<section id="general" class="home-section bg-neutral-9">
+				<General />
 				<span
 					class="die"
 					:style="{
@@ -50,8 +44,8 @@
 				>
 				</span>
 			</section>
-			<section id="general" class="bg-neutral-9">
-				<General />
+			<section id="builder" class="home-section bg-neutral-10">
+				<Builder />
 				<span
 					class="die"
 					:style="{
@@ -64,8 +58,8 @@
 				>
 				</span>
 			</section>
-			<section id="builder" class="bg-neutral-10">
-				<Builder />
+			<section id="share" class="home-section bg-neutral-9">
+				<Share />
 				<span
 					class="die"
 					:style="{
@@ -78,26 +72,12 @@
 				>
 				</span>
 			</section>
-			<section id="share" class="bg-neutral-9">
-				<Share />
-				<span
-					class="die"
-					:style="{
-						backgroundImage:
-							'url(' +
-							require('src/assets/_img/logo/logo-icon-no-shield-' + diceColors[5] + '.svg') +
-							')',
-						transform: `rotate(${scrolled}deg)`,
-					}"
-				>
-				</span>
-			</section>
-			<section id="campaign" class="bg-neutral-10">
-				<Campaign />
+			<section id="pricing" class="home-section bg-neutral-10">
+				<Pricing />
 			</section>
 			<Footer />
 		</template>
-	</q-scroll-area>
+	</div>
 	<div v-else class="user-content">
 		<Authenticated>
 			<UserContent />
@@ -114,7 +94,6 @@ import Feedback from "src/components/home/Feedback.vue";
 import General from "src/components/home/General.vue";
 import Share from "src/components/home/Share.vue";
 import Builder from "src/components/home/Builder.vue";
-import Campaign from "src/components/home/Campaign.vue";
 import Footer from "src/components/Footer.vue";
 import UserContent from "./UserContent";
 import Authenticated from "src/layouts/authenticated.vue";
@@ -132,7 +111,6 @@ export default {
 		General,
 		Share,
 		Builder,
-		Campaign,
 		Footer,
 		UserContent,
 		Authenticated,
@@ -145,13 +123,24 @@ export default {
 	computed: {
 		...mapGetters(["user"]),
 		diceColors() {
-			return ["cyan", "orange", "green", "blue", "red", "yellow"];
+			return ["cyan", "yellow", "orange", "green", "blue", "red"];
 		},
+	},
+	mounted() {
+		const scrollArea = this.$refs.scrollArea;
+		this._scrollListener = () => {
+			this.scrolled = scrollArea.scrollTop;
+		};
+		this._scrollListener();
+		scrollArea.addEventListener("scroll", this._scrollListener);
 	},
 	methods: {
 		handleScroll(e) {
 			this.scrolled = e.verticalPosition;
 		},
+	},
+	beforeDestroy() {
+		this.$refs.scrollArea.removeEventListener("scroll", this._scrollListener);
 	},
 };
 </script>
@@ -159,11 +148,9 @@ export default {
 <style lang="scss" scoped>
 .home {
 	height: 100vh;
+	overflow: auto;
 
-	&::-webkit-scrollbar {
-		display: none;
-	}
-	section {
+	.home-section {
 		position: relative;
 		padding: 50px 0;
 
@@ -184,6 +171,19 @@ export default {
 		background-repeat: no-repeat;
 		z-index: 97;
 	}
+	::v-deep {
+		a.learn-more {
+			font-weight: bold;
+			color: $neutral-1;
+
+			&:hover {
+				text-decoration: underline;
+			}
+			&::after {
+				content: "...";
+			}
+		}
+	}
 }
 .hk-layout {
 	height: 100vh;
@@ -200,8 +200,8 @@ export default {
 			bottom: -40px;
 		}
 
-		section {
-			padding: 60px 0;
+		.home-section {
+			padding: 80px 0;
 		}
 	}
 }

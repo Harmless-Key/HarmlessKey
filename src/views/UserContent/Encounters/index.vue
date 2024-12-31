@@ -10,8 +10,8 @@
 								encounter_count > tier.benefits.encounters
 									? 'red'
 									: encounter_count == tier.benefits.encounters
-									? 'neutral-2'
-									: 'green'
+										? 'neutral-2'
+										: 'green'
 							"
 						>
 							{{ encounter_count || 0 }}
@@ -46,7 +46,7 @@
 				<i aria-hidden="true" class="fas fa-box-full red mr-1" />
 				Over encumbered
 			</router-link>
-			<router-link v-else class="btn btn-sm ml-1" to="/patreon">
+			<router-link v-else class="btn btn-sm ml-1" to="/pricing">
 				<i aria-hidden="true" class="fab fa-patreon patreon-red mr-1" />
 				Get more slots
 			</router-link>

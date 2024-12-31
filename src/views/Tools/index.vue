@@ -81,7 +81,7 @@ export default {
 							title: "Encounter Builder",
 							description:
 								"Build encounters and see their difficulty for your party. You can run your encounters in our combat tracker.",
-							image: "encounter-builder-medium.jpg",
+							image: "encounter-builder-medium.webp",
 							url: "/tools/encounter-builder",
 							icon: "fas fa-hammer-war",
 						},

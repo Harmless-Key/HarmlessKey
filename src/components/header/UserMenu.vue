@@ -37,7 +37,7 @@
 							<q-item-section avatar><i aria-hidden="true" class="fas fa-user"></i></q-item-section>
 							<q-item-section>Profile</q-item-section>
 						</q-item>
-						<q-item clickable v-close-popup to="/patreon">
+						<q-item clickable v-close-popup to="/pricing">
 							<q-item-section avatar
 								><i aria-hidden="true" class="fas fa-coins"></i
 							></q-item-section>

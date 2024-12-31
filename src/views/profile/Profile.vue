@@ -138,7 +138,7 @@
 						<router-link
 							v-if="tier.price === 'Free'"
 							class="btn btn-block bg-patreon-red mt-4"
-							to="/patreon"
+							to="/pricing"
 						>
 							Subscribe for more storage
 						</router-link>
@@ -152,7 +152,7 @@
 						<router-link
 							v-if="tier.name !== 'Deity'"
 							class="btn btn-block bg-neutral-5 mt-3"
-							to="/patreon"
+							to="/pricing"
 						>
 							Need more slots?
 						</router-link>

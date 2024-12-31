@@ -113,7 +113,7 @@
 				<router-link
 					v-else-if="tier.price === 'Free'"
 					class="btn bg-neutral-8 btn-block"
-					to="/patreon"
+					to="/pricing"
 				>
 					Get more NPC slots
 				</router-link>
@@ -210,8 +210,8 @@ export default {
 			return this.card_width > 600
 				? ["avatar", "name", "type", "challenge_rating", "actions"]
 				: this.card_width > 450
-				? ["avatar", "name", "type", "actions"]
-				: ["avatar", "name", "actions"];
+					? ["avatar", "name", "type", "actions"]
+					: ["avatar", "name", "actions"];
 		},
 		npcIds() {
 			return this.npcs.map((npc) => npc.key);

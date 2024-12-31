@@ -63,7 +63,7 @@
 		<template v-if="tier.price === 'Free'">
 			<hr />
 			<p>This feature is only available with a subscription.</p>
-			<router-link to="/patreon" class="btn btn-block bg-patreon-red"
+			<router-link to="/pricing" class="btn btn-block bg-patreon-red"
 				>Get a subscription</router-link
 			>
 		</template>

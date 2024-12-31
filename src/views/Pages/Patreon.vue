@@ -30,6 +30,42 @@
 
 				<Tiers class="mb-4" />
 
+				<hk-card header="Why do you have to pay?">
+					<div class="card-body row q-col-gutter-xl">
+						<div class="col-12 col-md-6">
+							<p>
+								We wish we could offer the app for free. This is why we do have a free tier that
+								should be sufficient for most users. All the essential features will always be
+								accessible for all users, without cost. You only pay for more storage and quality of
+								life features.<br />
+								Unfortunately creating an app brings some costs with it. We need to invest a lot of
+								time in maintaining and expanding the app. And there are the costs of hosting
+								Shieldmaiden, as our user base expands, the costs increase.
+							</p>
+
+							<h2>Building together</h2>
+							<p>
+								Our goal is not to earn money, our goal is to create a D&D initiative tracker that
+								is useful for the entire community. <br />
+								To reach this goal, we will need support. This is why we have set up a Patreon. This
+								way you can help us in achieving this goal and benefit from the extra's that come
+								with it.
+							</p>
+						</div>
+						<div class="col-12 col-md-6">
+							<iframe
+								src="https://www.youtube.com/embed/-Z9i4WR5vtA?si=xYYrDRykRgjMUy8T"
+								title="Shieldmaiden Subscriptions"
+								frameborder="0"
+								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+								referrerpolicy="strict-origin-when-cross-origin"
+								allowfullscreen
+								class="interview"
+							></iframe>
+						</div>
+					</div>
+				</hk-card>
+
 				<hk-card header="About the benefits">
 					<div class="card-body">
 						<h2>Character Sync</h2>
@@ -64,37 +100,6 @@
 							Shieldmaiden, you can import it including all the monsters, spells and encounters and
 							you will be able to directly run it yourself.
 						</p>
-					</div>
-				</hk-card>
-				<hk-card header="Why do you have to pay?">
-					<div class="card-body">
-						<p>
-							We wish we could offer the app for free. This is why we do have a free tier that
-							should be sufficient for most users. All the essential features will always be
-							accessible for all users, without cost. You only pay for more storage and quality of
-							life features.<br />
-							Unfortunately creating an app brings some costs with it. We need to invest a lot of
-							time in maintaining and expanding the app. And there are the costs of hosting
-							Shieldmaiden, as our user base expands, the costs increase.
-						</p>
-
-						<h2>Building together</h2>
-						<p>
-							Our goal is not to earn money, our goal is to create a D&D initiative tracker that is
-							useful for the entire community. <br />
-							To reach this goal, we will need support. This is why we have set up a Patreon. This
-							way you can help us in achieving this goal and benefit from the extra's that come with
-							it.
-						</p>
-
-						<a
-							class="btn bg-patreon-red btn-block"
-							href="https://www.patreon.com/shieldmaidenapp"
-							target="_blank"
-							rel="noopener"
-						>
-							<i aria-hidden="true" class="fab fa-patreon black"></i> Support us
-						</a>
 					</div>
 				</hk-card>
 			</div>
@@ -151,6 +156,19 @@ export default {
 		font-size: 17px;
 		line-height: 30px;
 		margin-bottom: 30px;
+	}
+	.interview {
+		width: 100%;
+		border-radius: $border-radius;
+		aspect-ratio: 16/9;
+		justify-self: flex-end;
+	}
+}
+@media only screen and (max-width: 1023px) {
+	::v-deep {
+		.row {
+			flex-direction: column-reverse;
+		}
 	}
 }
 </style>

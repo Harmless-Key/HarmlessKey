@@ -1,6 +1,6 @@
 <template>
 	<div class="campaign">
-		<div class="container">
+		<div class="home__container">
 			<div class="head">
 				<h2>Campaign Manager</h2>
 				<div class="text">

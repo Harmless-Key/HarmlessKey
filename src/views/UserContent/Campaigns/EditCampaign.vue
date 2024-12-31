@@ -52,7 +52,7 @@
 									<i class="fas fa-eye" aria-hidden="true" />
 								</a>
 							</span>
-							<router-link class="btn bg-patreon-red" to="/patreon">Get a subscription</router-link>
+							<router-link class="btn bg-patreon-red" to="/pricing">Get a subscription</router-link>
 						</div>
 
 						<div class="background mt-2">

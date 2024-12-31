@@ -161,7 +161,7 @@
 											Sync with external character
 										</button>
 										<small class="neutral-3">
-											<router-link to="/patreon" class="mx-1">Subscription</router-link> for
+											<router-link to="/pricing" class="mx-1">Subscription</router-link> for
 											Shieldmaiden required.
 										</small>
 									</template>

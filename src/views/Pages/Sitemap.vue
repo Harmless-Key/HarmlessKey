@@ -5,7 +5,7 @@
 			<li><router-link to="/">Home</router-link></li>
 			<li><router-link to="/demo">Demo</router-link></li>
 			<li><router-link to="/about-us">About Us</router-link></li>
-			<li><router-link to="/patreon">Patreon</router-link></li>
+			<li><router-link to="/pricing">Patreon</router-link></li>
 			<li><router-link to="/sign-up">Sign Up</router-link></li>
 			<li><router-link to="/sign-in">Sign In</router-link></li>
 			<li><router-link to="/documentation">Documentation</router-link></li>

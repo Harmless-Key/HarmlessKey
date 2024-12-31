@@ -104,7 +104,7 @@
 				<router-link
 					v-else-if="tier.price === 'Free'"
 					class="btn bg-neutral-8 btn-block"
-					to="/patreon"
+					to="/pricing"
 				>
 					Get more spell slots
 				</router-link>

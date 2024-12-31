@@ -6,7 +6,7 @@
 				<p>
 					You can either delete some of your content, or get a subscription that allows for more.
 				</p>
-				<router-link to="/patreon" class="btn btn-block btn-lg bg-neutral-9 mt-2">
+				<router-link to="/pricing" class="btn btn-block btn-lg bg-neutral-9 mt-2">
 					<i aria-hidden="true" class="fab fa-patreon patreon-red mr-2" />
 					{{ tier.price === "Free" ? "Get" : "Upgrade" }} subscription
 				</router-link>

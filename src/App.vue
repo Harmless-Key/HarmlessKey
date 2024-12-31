@@ -14,13 +14,14 @@
 					"
 					:small-screen="small_screen"
 				/>
-				<q-scroll-area
+				<div
+					:is="$route.name === 'home' ? 'div' : 'q-scroll-area'"
 					class="scrollable-content"
 					:dark="$store.getters.theme === 'dark'"
 					:thumb-style="{ width: '5px' }"
 				>
 					<router-view />
-				</q-scroll-area>
+				</div>
 			</div>
 		</div>
 		<transition

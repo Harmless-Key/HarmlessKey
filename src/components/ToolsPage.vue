@@ -53,6 +53,9 @@ export default {
 		justify-content: center;
 		background-size: auto;
 		font-weight: bold;
+		min-height: unset;
+		aspect-ratio: 5/2;
+		background-repeat: no-repeat;
 	}
 	&::v-deep h2 {
 		font-size: 25px;

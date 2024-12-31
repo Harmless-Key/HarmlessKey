@@ -180,7 +180,7 @@
 							<router-link class="btn btn-sm bg-neutral-5 full-width" to="/weather-demo">
 								Checkout all effects
 							</router-link>
-							<router-link class="btn btn-sm full-width mt-2 bg-patreon-red" to="/patreon">
+							<router-link class="btn btn-sm full-width mt-2 bg-patreon-red" to="/pricing">
 								Get a subscription
 							</router-link>
 						</div>

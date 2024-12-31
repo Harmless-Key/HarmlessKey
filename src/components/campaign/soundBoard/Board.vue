@@ -46,7 +46,7 @@
 		</transition-group>
 
 		<div class="soundboard__actions">
-			<router-link v-if="tier.price === 'Free'" class="btn btn-block bg-patreon-red" to="/patreon">
+			<router-link v-if="tier.price === 'Free'" class="btn btn-block bg-patreon-red" to="/pricing">
 				Add custom links
 			</router-link>
 			<template v-else>

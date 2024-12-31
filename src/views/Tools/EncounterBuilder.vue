@@ -1,5 +1,5 @@
 <template>
-	<ToolsPage title="Encounter Builder" bg_img="encounter-builder-tool-header.jpg">
+	<ToolsPage title="Encounter Builder" bg_img="encounter-builder-header.webp">
 		<template v-slot:action_btn="{ btn_classes }">
 			<q-btn
 				color="primary"
@@ -69,8 +69,23 @@ export default {
 	components: {
 		ToolsPage,
 	},
-	data() {
-		return {};
+	meta() {
+		return {
+			meta: {
+				twitterImage: {
+					name: "twitter:image",
+					content: require(`assets/_img/meta/shieldmaiden-encounter-builder.png`),
+				},
+				ogImage: {
+					property: "og:image",
+					content: require(`assets/_img/meta/shieldmaiden-encounter-builder.png`),
+				},
+				ogImageAlt: {
+					property: "og:image:alt",
+					content: "Shieldmaiden Encounter Builder",
+				},
+			},
+		};
 	},
 };
 </script>

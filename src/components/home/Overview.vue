@@ -1,6 +1,6 @@
 <template>
 	<div class="overview">
-		<div class="container">
+		<div class="home__container">
 			<div class="deck">
 				<hk-card>
 					<template #image>

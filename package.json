@@ -16,6 +16,7 @@
 		"prepare": "husky install"
 	},
 	"dependencies": {
+		"@egjs/vue-flicking": "^4.12.0",
 		"@gtm-support/vue2-gtm": "^1.3.0",
 		"@octokit/rest": "^19.0.5",
 		"@quasar/extras": "^1.16.12",

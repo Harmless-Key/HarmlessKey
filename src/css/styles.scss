@@ -1227,15 +1227,16 @@ html body {
 	.home {
 		scroll-behavior: smooth;
 
-		.top {
-			.animated-video {
-				margin: -8% 0 -15%;
-			}
-		}
-
 		.content {
 			max-width: 1140px;
 			margin: auto;
+		}
+		&__container {
+			padding: 0 15px;
+			width: 100%;
+			max-width: 1280px;
+			margin-right: auto;
+			margin-left: auto;
 		}
 		section {
 			font-size: 18px;
@@ -1245,8 +1246,9 @@ html body {
 				margin-bottom: 50px;
 
 				h2 {
-					font-size: 30px;
-					line-height: 50px;
+					font-size: 35px;
+					line-height: 45px;
+					margin-bottom: 10px;
 				}
 				.text {
 					max-width: 600px;
@@ -1255,6 +1257,7 @@ html body {
 			h3 {
 				font-size: 25px !important;
 				margin-bottom: 30px !important;
+				font-weight: normal;
 			}
 			p {
 				margin-bottom: 50px;

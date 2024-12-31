@@ -5,7 +5,7 @@
 				<img class="logo" :src="require(`../../assets/_img/logo/${logo}`)" alt="Shieldmaiden" />
 			</div>
 			<div class="d-flex justify-content-end items-center">
-				<router-link class="btn btn-sm btn-clear" to="/patreon">
+				<router-link class="btn btn-sm btn-clear" to="/pricing">
 					Pricing
 					<i class="fas fa-coins ml-1" aria-hidden="true" />
 				</router-link>

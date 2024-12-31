@@ -28,7 +28,7 @@ export default {
 				"https://shieldmaiden.app/privacy-policy",
 				"https://shieldmaiden.app/changelog",
 				"https://shieldmaiden.app/feedback",
-				"https://shieldmaiden.app/patreon",
+				"https://shieldmaiden.app/pricing",
 				"https://shieldmaiden.app/compendium",
 				"https://shieldmaiden.app/compendium/conditions",
 				"https://shieldmaiden.app/compendium/monsters",

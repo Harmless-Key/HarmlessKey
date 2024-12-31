@@ -5,7 +5,6 @@ const Documentation = () => import("src/views/Pages/Documentation.vue");
 const SignInPage = () => import("src/views/Pages/SignIn.vue");
 const SignUp = () => import("src/views/Pages/SignUp.vue");
 const ResetPassword = () => import("src/views/Pages/ResetPassword.vue");
-const Patreon = () => import("src/views/Pages/Patreon.vue");
 const WeatherDemo = () => import("src/views/Pages/WeatherDemo.vue");
 
 const Profile = () => import("src/views/profile/Profile.vue");
@@ -1498,13 +1497,13 @@ const routes = [
 		},
 	},
 	{
-		path: "/patreon",
-		name: "Patreon",
-		component: Patreon,
+		path: "/pricing",
+		name: "Pricing",
+		component: () => import("src/views/Pages/Patreon.vue"),
 		meta: {
-			title: "Patreon support",
+			title: "Pricing",
 			description:
-				"Support Shieldmaiden on Patreon for more content slots and help our D&D Combat Tracker improve.",
+				"Get a Shieldmaiden subscription for more content slots and help our D&D Combat Tracker improve.",
 		},
 	},
 	{
@@ -1616,6 +1615,7 @@ const routes = [
 	{ path: "/followed", redirect: "/content/followed" },
 	{ path: "/settings", redirect: "/content/settings" },
 
+	{ path: "/patreon", redirect: "/pricing" },
 	{ path: "/updates", redirect: "/changelog" },
 	{ path: "/combat-tracker", redirect: "/demo" },
 	{ path: "/monster-creator", redirect: "/tools/monster-creator/create-monster" },

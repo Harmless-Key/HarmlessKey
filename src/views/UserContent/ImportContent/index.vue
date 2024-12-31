@@ -40,7 +40,7 @@
 				Content creators can export their entire one shots or campaigns from Shieldmaiden and you
 				will be able to import them including all encounters and monsters.
 			</p>
-			<router-link to="/patreon" class="btn btn-lg mt-2">Get a subscription</router-link>
+			<router-link to="/pricing" class="btn btn-lg mt-2">Get a subscription</router-link>
 		</div>
 	</hk-card>
 </template>

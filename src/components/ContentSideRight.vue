@@ -32,7 +32,7 @@
 				v-if="tier.price === 'Free'"
 				slot="footer"
 				class="card-footer justify-content-start neutral-3"
-				>* <router-link to="/patreon" class="mx-1">Subscription</router-link> for Shieldmaiden
+				>* <router-link to="/pricing" class="mx-1">Subscription</router-link> for Shieldmaiden
 				required.</small
 			>
 		</hk-card>
@@ -93,7 +93,7 @@
 			<router-link
 				v-else-if="tier.name !== 'Deity'"
 				slot="footer"
-				to="/patreon"
+				to="/pricing"
 				class="btn btn-block btn-square bg-patreon-red"
 			>
 				{{ tier.price === "Free" ? "Subscribe" : "Upgrade" }}

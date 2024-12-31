@@ -183,7 +183,7 @@
 						<button v-if="!isEmpty(weather)" class="btn bg-neutral-5" @click="clearWeather">
 							Clear
 						</button>
-						<router-link v-else to="/patreon" class="btn bg-patreon-red"
+						<router-link v-else to="/pricing" class="btn bg-patreon-red"
 							>Get a subscription</router-link
 						>
 					</template>

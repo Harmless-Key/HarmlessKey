@@ -196,7 +196,7 @@
 					<hr />
 				</template>
 				<q-list @click="setSideSmallScreen(false)">
-					<q-item clickable v-ripple to="/patreon">
+					<q-item clickable v-ripple to="/pricing">
 						<q-item-section avatar>
 							<i aria-hidden="true" class="fas fa-coins" />
 						</q-item-section>
